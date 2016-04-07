@@ -27,15 +27,15 @@ struct node* CREATE_NODE(int num){
 };
 
 void BINOMIAL_LINK(struct node *y,struct node *z){
-    y->head=z;
-    y->sibling=z->child;
-    z->child=y;
+    y->head = z;
+    y->sibling = z->child;
+    z->child = y;
     z->degree = z->degree+1;
 }
 
 
 struct node* BINOMIAL_HEAP_MERGE(struct node* H1,struct node* H2){
-    struct node* H=MAKE_BINOMIAL_HEAP();
+      struct node* H = MAKE_BINOMIAL_HEAP();
     struct node* y;
     struct node* z;
     struct node* a;
